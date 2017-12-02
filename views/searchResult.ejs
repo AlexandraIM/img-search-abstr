@@ -1,15 +1,16 @@
 <ul>
   
-  <ul> 
+  <ul style="list-style-type: none;"> 
     <% for(var i = 0; i<results.length; i++) {%>
-    <li>{
-      <br/>
+    <li>
+      <br>
+      {
         url: <a href="<%= results[i].url %>"><%= results[i].url %></a>
-      <br/>
+      <br>
         snippet : <%= results[i].snippet %>
-      <br/>
+      <br>
         thumbnail : <a href="<%= results[i].thumbnail %>"> <%= results[i].thumbnail %></a>
-      <br/>
+      <br>
         context : <a href="<%= results[i].context %>"> <%= results[i].context %></a>
       }
     </li>

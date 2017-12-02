@@ -1,3 +1,4 @@
+'use strict';
 let MongoClient = require('mongodb').MongoClient;
 //seve request string to DB
 exports.save = function (request) {
@@ -22,7 +23,7 @@ exports.save = function (request) {
     }
   });
 };
-
+//get 10 last queries
 exports.get = function (callback) {
   MongoClient.connect(process.env.DB_PATH, function(err, db) {
     if(err) {

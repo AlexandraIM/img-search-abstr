@@ -1,0 +1,18 @@
+body {
+  padding: 10px;
+}
+h1{
+  text-decoration: underline;
+  color: orange;
+}
+
+ul {
+  list-style-type: none;
+  border-left: 5px solid red;
+    background-color: #f1f1f1;
+}
+
+.example{
+  padding: 10px;
+  background-color: #f1f1f1;
+}
