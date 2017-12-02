@@ -1,27 +1,24 @@
-Welcome to the Glitch BETA
+Image Search Abstraction Layer
 =========================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+User Story:
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+- I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+- I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+- I can get a list of the most recently submitted search strings.
 
-Find out more [about Glitch](https://glitch.com/about).
+### Example query usage:
 
+> https://img-search-abstr.glitch.me/api/imagesearch/lolcats%20funny?offset=10 
+> https://img-search-abstr.glitch.me/api/latest/
 
-Your Project
-------------
+### Example query output:
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+> { url: http://images6.fanpop.com/image/photos/33600000/Funny-lolcats-lol-cats-33632376-284-177.jpg 
+snippet : lol cats images Funny lolcats wallpaper and background photos ... 
+thumbnail : https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTgktnuhOQXYt_YXKHp29lWftSi6wYZfHqDPSde61sQGs2FJwc7gmvu0 
+context : http://www.fanpop.com/clubs/lol-cats/images/33632376/title/funny-lolcats-photo }
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+### Example latest output:
 
-
-Made by [Fog Creek](https://fogcreek.com/)
--------------------
-
-\ ゜o゜)ノ
+> [{"term":"lolcats funny","when":"2017-12-02T15:32:09.708Z"},{"term":"dogs","when":"2017-12-02T15:21:45.875Z"},{"term":"bike","when":"2017-12-02T15:20:23.599Z"},{"term":"dubai","when":"2017-12-02T15:18:50.807Z"},{"term":"dogs","when":"2017-12-02T15:12:34.202Z"},{"term":"cats","when":"2017-12-02T14:40:13.303Z"}]
